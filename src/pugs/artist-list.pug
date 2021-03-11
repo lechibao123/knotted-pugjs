@@ -1,0 +1,59 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - artist
+    
+block main-wrapper
+    h1(style="display:none") Namtech - artist
+    .wrapper-child
+        .artist-collapse
+            -
+                let listArray = [
+                    {name: "BRENT HARRIS", country: "AUS ",avata: "./assets/imgs/hover-article.jpg", img: "../assets/imgs/detail-img.jpg", website: "https://www.google.com/", ig: "https://www.instagram.com/"},
+                    {name: "HANNAH NOWLAN", country: "AUS",avata: "./assets/imgs/hover-article.jpg", img: "../assets/imgs/detail-img.jpg", website: "https://www.google.com/", ig: "https://www.instagram.com/"},
+                    {name: "LOUISE ZHANG", country: "CHINA/AUS",avata: "./assets/imgs/hover-article.jpg", img: "../assets/imgs/detail-img.jpg", website: "https://www.google.com/", ig: "https://www.instagram.com/"},
+                    {name: "MARIANA STROCCHI", country: "CHINA/AUS",avata: "./assets/imgs/hover-article.jpg", img: "../assets/imgs/detail-img.jpg", website: "https://www.google.com/", ig: "https://www.instagram.com/"}
+                ]
+            ul.artist-list
+                for value in listArray
+                    li
+                        p.link
+                            a(href="javascript:void(0)").text-uppercase=value.name
+                                span.country.ml-3=value.country
+                                span.arrow-down ↓
+                            img(src=value.avata).hover-img
+                            ul.submenu
+                                li
+                                    section.details
+                                        .details__img
+                                            a(href="javascript:void(0)", onclick="window.open('./artists.html', '_self');")
+                                                img(src=value.img, alt="avatar")
+                                        .details__content
+                                            .content-info
+                                                .content
+                                                    a(href="javascript:void(0)", onclick="window.open('./artists.html', '_self');")
+                                                        h2 louise zhang
+                                                    h4 china/aus 
+                                                    p Louise Zhang (b.1991) is a Chinese-Australian multidisciplinary artist whose practice spans painting, sculpture and installation. Zhang explores the dynamics of aesthetics, contrasting the attractive and repulsive in order to navigate the senses of fear, anxiety and a sense of otherness reflecting her identity. Her work is inspired by horror cinema, Chinese mythology and botany, adopting and placing symbols and motifs in compositions of harmonic dissonance.
+                                                .parameter
+                                                    ul
+                                                        li 
+                                                            span website
+                                                            span 
+                                                                a(href="javascript:void(0)", onclick=`window.open('${value.website}', '_blank');`) luisezhang.com
+                                                        li
+                                                            span INSTAGRAM 
+                                                            span 
+                                                                a(href="javascript:void(0)", onclick=`window.open('${value.ig}', '_blank');`) @louise__zhang
+                                .owl-artist-list.owl-carousel.owl-theme
+                                    - for (var x = 0; x < 3; x++)
+                                        .item
+                                            .artist_content
+                                                p RUG TITLE 
+                                                p.pl-4 DESIGNED BY ARTIST NAME
+                                            a(href="javascript:void(0)", onclick=`window.open('./detail-artist.html', '_blank');`)
+                                                img(src="./assets/imgs/thumb-product.png", alt="")
+                                            .view
+                                                a(href="javascript:void(0)", onclick=`window.open('./detail-artist.html', '_blank');`).arrow VIEW
+                                p
+    include ./parts/includes/subscribe-email.pug

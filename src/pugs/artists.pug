@@ -1,0 +1,13 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - artist
+    
+block main-wrapper
+    h1(style="display:none") Namtech - artist
+    .wrapper-child
+        include ./parts/includes/detail.pug
+        .artist.wrapper-child-artist
+            h2  ARTISTS RUGS
+            include ./parts/includes/artist-rugs.pug
+            

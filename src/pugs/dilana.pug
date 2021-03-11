@@ -1,0 +1,23 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - dilana
+    
+block main-wrapper
+    h1(style="display:none") Namtech - dilana
+    .wrapper-child 
+        - 
+            let leftRight = [
+                {flexdirection:'flex-direction:row' ,image: "./assets/imgs/dilana01.jpg", h2:'placeholder we partner with artists, handmade beautiful rugs, delivered and installed for you.',destription1:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',destription2:'	Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'},
+                {flexdirection:'flex-direction:row-reverse', image:"./assets/imgs/dilana02.jpg", h2:'placeholder title',destription1:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',destription2:'	Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'},
+                {flexdirection:'flex-direction:row', image: "./assets/imgs/dilana03.jpg", h2:'placeholder we partner with artists, handmade beautiful rugs, delivered and installed for you.',destription1:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',destription2:'	Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'}
+            ]
+        for value in leftRight
+            .left-right(style=value.flexdirection)
+                .about__img
+                        img(src=value.image, alt="img")
+                .about__content
+                    .content
+                        h2=value.h2
+                        p=value.destription1
+                        p=value.destription2

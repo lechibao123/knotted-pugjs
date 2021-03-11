@@ -1,0 +1,60 @@
+.burry-sun.container-fluid
+    .row
+        .col-md-6
+            .owl-detail-rug.owl-carousel.owl-theme
+                - 
+                    let suns = [
+                        {source: "./assets/imgs/thumb-product.png", alt: "product1"},
+                        {source: "./assets/imgs/thumb-product.png", alt: "product2"},
+                        {source: "./assets/imgs/thumb-product.png", alt: "product3"},
+                    ]
+                for sun in suns
+                    .item
+                        .detail-item.slider
+                            img(src=sun.source, alt=sun.alt)
+        .col-md-6.detail-rug
+            .artist-content.details
+                ol.breadcrumb
+                    li Artist
+                    li LOUISE ZHANG
+                    li BURY THE SUN
+                .info
+                    h3.text-uppercase Burry the sun
+                    p.text-uppercase.author Louise zhang
+                    .description
+                        p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+                        p Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            .info-shipping
+                .panel-group
+                    .panel.panel-default
+                        .panel-heading(data-toggle='collapse' href='#collapse_specs')
+                                a.text-uppercase
+                                    span.country spec
+                                    span.arrow-up ↑
+                        #collapse_specs.panel-collapse.collapse
+                            - 
+                                let specs = [
+                                    {text: "185 cm x 185 cm"},
+                                    {text: "woven something"},
+                                ]
+                            for spec in specs
+                                ul
+                                    li= spec.text
+            .shipping
+                .panel-group
+                    .panel.panel-default
+                        .panel-heading(data-toggle='collapse' href='#collapse_shipping')
+                                a.text-uppercase
+                                    span.country shipping & delivery
+                                    span.arrow-up ↑
+                        #collapse_shipping.panel-collapse.collapse
+                            - 
+                                let ships = [
+                                    {text: "Free Shipping"},
+                                    {text: "In Vietnam"},
+                                ]
+                            for ship in ships
+                                ul
+                                    li= ship.text
+            .contact-us
+                a(href="./contact.html") CONTACT US

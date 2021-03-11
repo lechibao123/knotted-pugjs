@@ -1,0 +1,28 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - BLOG
+    
+block main-wrapper
+    h1.d-none Namtech - BLOG
+    .wrapper-child 
+        .blog
+            .about__img
+                    img(src="./assets/imgs/about-img.jpg", alt="")
+            .about__content
+                .content
+                    h2 ARTICLE PLACEHOLDER TITLE NAME OF IT
+                    p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+                .parameter
+                    a(href="#")
+                        span.arrow READ NOW
+
+        div
+            ul.gallery-item.text-uppercase
+                - for(let x = 1; x < 12; x++)
+                    include ./parts/includes/list-news.pug 
+                
+        hr(color="#2B4429")
+        h6.more.text-center LOAD MORE
+        h6.less.text-center LOAD LESS

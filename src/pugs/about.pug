@@ -1,0 +1,26 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - about
+    
+block main-wrapper
+    h1(style="display:none") Namtech - about
+    .wrapper-child
+        section.about 
+            .about__img
+                    img(src="./assets/imgs/about-img.jpg", alt="")
+            .about__content
+                .content
+                    h2 We partner with leading contemporary artists to extend their vision into an exquisite textile. 
+                    h4 china/aus 
+                    p Our rugs are handmade using quality fibres, and range from one-off originals to limited editions. Our rugs are not only a textile, but a piece of art to be sought after as a tactile luxury.
+                    p Knotted originated as part of the Dilana Design Group. Together Knotted and Dilana have been crafting the finest rugs for over 40 years. 
+
+                .parameter
+                    ul
+                    - for (let x = 0; x < 1; x++)
+                        li 
+                            a(href="#")
+                                span.arrow contact us
+                            
+        

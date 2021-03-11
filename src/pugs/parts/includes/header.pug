@@ -1,0 +1,27 @@
+block header
+    header.sticky(style="width:100%")
+        .header.wrapper-child
+            .logo   
+                a(href="index.html") 
+                    img(src="./assets/imgs/logo.svg", alt="logo")
+            div.area.mx-auto 
+                a(href="index.html")
+                     img(src="https://knotted.nativesstaging.com.au/wp-content/themes/knotted/assets/imgs/KNOTTEDLOGOGREEN.svg", alt="logo")
+        div#toggle-menu
+            span
+            span
+            span
+        nav.nav.wrapper-child
+            - 
+                let link = [
+                    {class: "left", label:[{name:'rugs',link:'./rug.html'},{name:'artists',link:'./artist-list.html'}]},
+                    {class: "center", label:[{name:'beauty',link:'#'},{name:'art',link:'#'},{name:'function',link:'#'}]},
+                    {class: "right", label:[{name:'about',link:'./about.html'},{name:'dilana',link:'./dilana.html'},{name:'contact',link:'./contact.html'}]}
+                ]
+            ul
+                for data in link
+                    li(class=data.class) 
+                        ul(class="item-child") 
+                            for data1 in data.label
+                                li
+                                    a(href=data1.link)=data1.name

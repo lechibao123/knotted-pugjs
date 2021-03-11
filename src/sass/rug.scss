@@ -1,0 +1,17 @@
+.rug {
+    position: relative;
+
+    .how-works {
+        height: 362px;
+        background: $light-color;
+        color: $text-color;
+        padding-left: 32px;
+        border-bottom: 1px solid $primary-color;
+
+        h3 {
+
+            padding-top: 50px;
+        }
+
+    }
+}

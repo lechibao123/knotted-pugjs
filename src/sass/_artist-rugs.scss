@@ -1,0 +1,133 @@
+.artist{
+    h2{
+        color: $primary-color;
+        font-size: 35px;
+        letter-spacing: 1.21px;
+        line-height: 37px;
+        text-align: left;
+        padding: 36px 351px 30px 32px;
+        border-bottom: 1px solid $primary-color;
+        margin:0;
+        text-transform: uppercase;
+    }
+}
+.artist-2{
+    h2{
+        color: $primary-color;
+        font-size: 24px;
+        letter-spacing: 0.83px;
+        text-align: left;
+        padding: 36px 351px 30px 32px;
+        border-bottom: 1px solid $primary-color;
+        margin:0;
+        text-transform: uppercase;
+        @include respond-to(767){
+            padding: 36px 100px 30px 32px;
+        }
+    }
+}
+.artist__item{
+    .item{
+        background: $text-pink;
+        border-left: 1px solid $primary-color;
+        border-right: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        .artist_content{
+            font-size:16px;
+            padding-left: 30px;
+            padding-top:47px;
+            letter-spacing: 0.55px;
+            line-height: 19.97px;
+        }
+        img{
+            object-fit: cover;
+        }
+        .view{
+            text-align: center;
+            padding-bottom: 38px;
+            padding-top:41px;
+        }
+        a{
+            text-decoration: underline;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.41px;
+            line-height: 14.98px;
+            color: $primary-color;
+            &:hover{
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+    }
+}
+.owl-artist-list{
+    .item{
+        background: $text-pink;
+        border-left: 1px solid $primary-color;
+        border-right: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        .artist_content{
+            font-size:16px;
+            padding-left: 30px;
+            padding-top:47px;
+            letter-spacing: 0.55px;
+            line-height: 19.97px;
+        }
+        img{
+            object-fit: cover;
+        }
+        .view{
+            text-align: center;
+            padding-bottom: 38px;
+            padding-top:41px;
+        }
+        a{
+            text-decoration: underline;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.41px;
+            line-height: 14.98px;
+            color: $primary-color;
+            &:hover{
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+    }
+}
+.owl-artist-rug-2{
+    .item{
+        background: $text-pink;
+        border-left: 1px solid $primary-color;
+        border-right: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        .artist_content{
+            font-size:16px;
+            padding-left: 30px;
+            padding-top:47px;
+            letter-spacing: 0.55px;
+            line-height: 19.97px;
+        }
+        img{
+            object-fit: cover;
+        }
+        .view{
+            text-align: center;
+            padding-bottom: 38px;
+            padding-top:41px;
+        }
+        a{
+            text-decoration: underline;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.41px;
+            line-height: 14.98px;
+            color: $primary-color;
+            &:hover{
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+    }
+}

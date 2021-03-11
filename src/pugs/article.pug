@@ -1,0 +1,53 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - article
+    
+block main-wrapper
+    h1.d-none Namtech - article
+    .wrapper-child.bg-pink
+        section.article
+            .container.text-justify.text-md-left
+                .article-title
+                    h2 ARTICLE PLACEHOLDER TITLE NAME OF IT
+                .article-content
+                    p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+                        |laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        |beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                        |accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis 
+                        |et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error
+                        | sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                        | et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        | accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto 
+                        | beatae vitae dicta sunt explicabo.
+                .article-imgs
+                    .row
+                        .col-md-6.col-12.mt-md-5.mt-4
+                            img(src="./assets/imgs/article/article-1.jpg", alt="article-1")
+                        .col-md-6.col-12.mt-md-5.mt-4
+                            img(src="./assets/imgs/article/article-2.jpg", alt="article-2")
+                .article-content
+                    p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam 
+                        |rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        |Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+                        |eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis 
+                        |unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+                        |inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error 
+                        |sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
+                        |architecto beatae vitae dicta sunt explicabo. 
+                    p Architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                        |doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
+                        |sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+                        |eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    <br/>
+                    a(href="#") SHARE ARTICLE
+        hr(color="#2B4429")
+        section.gallery
+            div
+                ul.gallery-items.text-uppercase
+                    - for(let x = 1; x < 10; x++)
+                        include ./parts/includes/list-news.pug
+            hr(color="#2B4429")
+            h6.more.text-center LOAD MORE
+            h6.less.text-center LOAD LESS
+

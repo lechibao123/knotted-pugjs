@@ -1,0 +1,326 @@
+///////////////////////////////SEN/////////////////////////////////////
+.details {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid $primary-color;
+    background: $text-pink;
+    flex-wrap: wrap;
+
+    .details__img {
+        a {
+            width: 100%;
+            height: 100%;
+            color: $text-green;
+            padding: 0 !important;
+        }
+    }
+
+    .content-info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+
+        a {
+            color: $text-green;
+            padding: 0 !important;
+        }
+    }
+
+    &__content {
+        width: 50%;
+        position: relative;
+
+        @include respond-toSP(768) {
+            border-right: 1px solid $primary-color;
+        }
+
+        // border-right: 1px solid $primary-color;
+        padding: 40px 30px;
+
+        @include respond-to(768) {
+            width: 100%;
+        }
+
+        h4 {
+            font-size: 16px;
+
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            width: 80%;
+            font-size: 14px;
+
+            line-height: 20px;
+            letter-spacing: 1px;
+
+            @include respond-to(768) {
+                width: 100%;
+            }
+        }
+
+        h2 {
+            font-size: 35px;
+
+            text-transform: uppercase;
+        }
+    }
+
+    ol {
+        margin-bottom: 30px;
+        background: transparent;
+        position: relative;
+        padding: 0;
+
+        li {
+            text-transform: uppercase;
+            font-size: 12px;
+
+
+
+            &:not(:last-child)::after {
+                content: '>';
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .parameter {
+        width: 100%;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid $primary-color;
+            border-bottom: 1px solid $primary-color;
+
+            padding: 10px 30px;
+            margin: 0 -30px;
+
+            span {
+                padding: 0 30px;
+                color: $primary-color;
+                font-size: 16px;
+
+
+                &:nth-child(1) {
+                    text-transform: uppercase;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+                }
+
+            }
+
+
+
+            &:last-child {
+                border-top: none;
+                border-bottom: none;
+            }
+
+            &:nth-child(1) {
+                //   height: 100px;
+            }
+        }
+    }
+
+    &__img {
+        max-height: 730px;
+        min-height: 550px;
+
+        @include respond-to(768) {
+            max-height: 400px;
+            min-height: 300px;
+        }
+
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+
+        @include respond-to(768) {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+.artist {
+    position: relative;
+    width: 100%;
+}
+
+///////////////////////////////SEN/////////////////////////////////////
+
+//Harry 
+.artist-collapse {
+    ul li {
+        list-style: none;
+        margin: 0;
+    }
+
+    .artist-list .hover-img {
+        z-index: -10;
+        opacity: 0;
+        right: 30%;
+        position: absolute;
+        top: -120px;
+        width: auto;
+        z-index: -100;
+        transition: all ease-in 0.5s;
+    }
+
+    .artist-list {
+
+        width: 100%;
+        margin: 0;
+        .owl-artist-list{
+            width: 35%;
+        }
+
+        .details__content {
+            padding-bottom: 0;
+
+            @include respond-toSP(768) {
+                border-left: 1px solid $primary-color;
+            }
+        }
+
+        .link {
+            position: relative;
+
+            a {
+                position: relative;
+                display: block;
+                padding: 15px 20px;
+                color: $text-green;
+                font-weight: 400;
+                text-decoration: none;
+                font-size: 3.75rem;
+                border-bottom: 1px solid $bg-green;
+
+                @include respond-to(768) {
+                    font-size: 1.5rem;
+                }
+
+                @include respond-to(376) {
+                    font-size: 1rem;
+                }
+
+                &:hover~img {
+                    opacity: 1;
+                    z-index: 10000;
+
+                    @include respond-to(1024) {
+                        display: none;
+                    }
+                }
+
+                .country {
+                    font-size: 1rem;
+                    font-weight: normal;
+
+                    @include respond-to(768) {
+                        font-size: .875rem;
+                    }
+
+                    @include respond-to(376) {
+                        font-size: .75rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .artist-list>li {
+        position: relative;
+    }
+
+    .artist-list.link a {
+        position: relative;
+        display: block;
+        padding: 15px 20px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 3.75rem;
+
+        @include respond-to(768) {
+            font-size: 1.5rem;
+        }
+
+        @include respond-to(376) {
+            font-size: 1rem;
+        }
+    }
+
+    .submenu {
+        display: none;
+        .view{
+            padding-bottom: 37px !important;
+        }
+        &>li{
+            width: 60%;
+            float: left;
+            @include respond-to(1024) {
+                width: 100%;
+            }
+        }
+        & .owl-artist-list{
+            width: 40%;
+            float: left;
+            .item{
+                border-left: none;
+                img{
+                    // height: 271px;
+                }
+            }
+            @include respond-to(1024) {
+                display: none;
+            }
+        }
+        p{
+            clear: both;
+        }
+        @include respond-to(1024) {
+            width: 100%;
+        }
+        .details__img{
+            max-height: 502px;
+            min-height: auto;
+        }
+    }
+
+    .artist-list .submenu>li a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .arrow-down {
+        position: absolute;
+        top: 50%;
+        right: 58px;
+        color: $text-green;
+        transform: translateY(-50%);
+
+        @include respond-to(768) {
+            right: 38px;
+        }
+    }
+
+    .active-collapse .arrow-down {
+        transform: translateY(-50%) rotate(180deg);
+    }
+}

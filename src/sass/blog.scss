@@ -1,0 +1,48 @@
+.blog {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $primary-color;
+
+    .about__content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 50px;
+
+        @include respond-to(768) {
+            padding: 20px;
+        }
+
+        .content {
+            width: 55%;
+
+            @include respond-to(768) {
+                width: 80%;
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+        .parameter {
+            position: absolute;
+            bottom: 45px;
+            left: 45px;
+
+            @include respond-to(768) {
+                bottom: 0;
+            }
+
+
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+    }
+}

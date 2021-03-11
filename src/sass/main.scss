@@ -1,0 +1,246 @@
+@import 'variables.scss';
+@import 'common.scss';
+@import 'subscribe-email.scss';
+@import 'function.scss';
+@import 'current-rugs.scss';
+@import './header.scss';
+@import './hero.scss';
+@import './how-work.scss';
+@import './artist.scss';
+@import './artist-rugs.scss';
+@import './about.scss';
+@import './contact.scss';
+@import './dilana.scss';
+@import './detail-rug-page.scss';
+@import './article.scss';
+@import './blog.scss';
+@import './rug.scss';
+@import './artist-brief.scss';
+
+/*
+ *  Common Header & Footer
+ */
+.common {
+
+    &-header,
+    &-footer {
+        font-size: .85rem;
+    }
+
+    &-header {
+        color: $dark-color;
+        @include slide--up(1s, 1.5s);
+    }
+
+    &-footer {
+        border-bottom: 1px solid #FFFBF2;
+        background-color: $bg-green;
+        color: $text-pink;
+        text-transform: uppercase;
+
+        
+
+        .border-footer {
+            border-bottom: 1px solid $bg-pink !important;
+            color: $text-pink;
+        }
+
+        a {
+            color: $text-pink;
+            font-size: 16px;
+
+            &:hover {
+                color: $dark-color;
+                text-decoration: none;
+                font-style: italic;
+            }
+        }
+
+        h1 {
+            font-style: normal
+        }
+
+        .center {
+            height: 120px;
+            line-height: 120px;
+            white-space: nowrap;
+            letter-spacing: 2.5px;
+            font-weight: normal;
+        }
+
+        .logo {
+            width: 100%;
+            text-align: right;
+
+            a {
+                img {
+                    width: 43px;
+                }
+            }
+        }
+    }
+}
+
+/*
+ *  Main Wrapper
+ */
+.main-wrapper {
+    min-height: 100vh;
+    background-color: #FFFBF2;
+    @extend .dflex;
+    @extend .dflex--default;
+    @extend .dflex--col;
+    @extend .align--left;
+
+    img {
+        @include logo--special(1s, 1.5s);
+    }
+
+    h1 {
+        font-weight: bold;
+        @include slide--up(1.25s, 2.25s);
+
+        span {
+            letter-spacing: 4px;
+
+            &:first-child {
+                color: $light-color;
+                -webkit-text-stroke: 1px black;
+            }
+
+            &:last-child {
+                @extend .text--primary;
+            }
+        }
+    }
+
+    h2 {
+
+        @include slide--up(1.5s, 3.5s);
+    }
+
+    .content {
+
+        @include slide--up(1.75s, 3.75s);
+    }
+}
+
+.current-rugs {
+    color: #2B4429;
+    font-family: Rational;
+    font-size: 14px;
+    letter-spacing: 0.48px;
+    line-height: 15px;
+    text-align: left;
+}
+
+.mt-39 {
+    @include margin--top(39px)
+}
+
+.mt-32 {
+    @include margin--top(32px)
+}
+
+.mt-16 {
+    @include margin--top(16px)
+}
+
+.mb-22 {
+    @include margin--bottom(22px)
+}
+
+.mb-31 {
+    @include margin--bottom(31px);
+}
+
+.mt-26 {
+    @include margin--top(26px)
+}
+
+.mt-12 {
+    @include margin--top(12px)
+}
+
+.mt-58 {
+    @include margin--top(58px);
+}
+
+.mb-20 {
+    @include margin--bottom(20px)
+}
+
+.mb-23 {
+    @include margin--bottom(23px);
+}
+
+.mb-40 {
+    @include margin--bottom(40px);
+}
+
+.text-11 {
+    font-size: 11px !important;
+}
+
+.text-35 {
+    font-size: 35px !important;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.spacing {
+    word-spacing: 1.21px;
+}
+
+p {
+    font-size: .875rem;
+    margin: 0 !important;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #2B4429;
+    border-radius: 0px;
+    background-color: $bg-pink;
+    color: $text-green;
+}
+
+.bg-pink {
+    background-color: $bg-pink;
+}
+
+.bg-green {
+    background-color: $bg-green;
+}
+
+.opacity-06{
+    opacity: .6;
+}
+
+.opacity-08 {
+    opacity: .8;
+}
+
+textarea,
+select,
+input[type="text"] {
+    background-color: $bg-pink;
+    color: $primary-color;
+    height: 60px;
+    width: 100%;
+    padding: 10px 20px;
+    &:focus {
+        outline: none;
+        background-color: white;
+    }
+}
+
+#theTextarea {
+    height: 310px;
+    resize: none;
+}

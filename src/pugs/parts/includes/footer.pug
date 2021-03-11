@@ -1,0 +1,41 @@
+.wrapper-child
+    .common-footer.border-footer
+        .px-4.px-md-5
+            .row
+                .col-6
+                    h1.center KNOTTED
+                .col-6
+                    .logo.center
+                        a(href="index.html")
+                            img(src="./assets/imgs/icon_2.svg", alt="Logo")
+                .col-6.opacity-06
+                    h6 beauty art function
+                .col-6.opacity-08
+                    .row.d-flex.justify-content-end
+                        - 
+                            let datas = [
+                                {href: "./rugs.html", label: "rugs", target: "_blank"},
+                                {href: "./artists.html", label: "artists", target: "_blank"},
+                                {href: "./about.html", label: "about", target: "_blank"},
+                                {href: "./blog.html", label: "blog", target: "_blank"},
+                                {href: "./dilana.html", label: "dilana", target: "_blank"},
+                                {href: "./contact.html", label: "contact", target: "_blank"},
+                            ]
+                        for data in datas
+                            .col-md-auto.col-6
+                                a(href=data.href, target=data.target ? data.target : "")= data.label
+        hr(color="#FFFBF2")
+        .wrapper-child.px-4.px-md-5
+            .row.opacity-06
+                .col-6.mt-12.mb-23.text-lowercase
+                    .d-flex.flex-row
+                        p.text-11.mr-4 all rights reserved
+                        p.text-11 privacy policy
+                .col-6.mt-12.mb-23.text-uppercase
+                    .row.d-flex.justify-content-end
+                        .col-md-auto.col-6
+                            a(href="#", target="_blank").text-11 instagram
+                        .col-md-auto.col-6
+                            a(href="#", target="_blank").text-11 facebook
+                        .col-md-auto.col-6
+                            a(href="#", target="_blank").text-11 pinterest

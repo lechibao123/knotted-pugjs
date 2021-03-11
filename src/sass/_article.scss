@@ -1,0 +1,89 @@
+.article {
+    color: $text-green;
+    font-style: italic;
+    line-height: 20px;
+    margin-top: 70px;
+    margin-bottom: 84px;
+
+    .article-title {
+        h2 {
+            font-size: 2.1875rem;
+        }
+    }
+
+    .article-content {
+        margin-top: 40px;
+    }
+
+    a {
+        color: $text-green;
+        font-size: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.gallery-items,
+.gallery-item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 35px;
+    font-style: italic;
+
+    li {
+        display: none;
+        width: 33.33%;
+        list-style: none;
+        padding-right: 20px;
+        margin-bottom: 40px;
+
+        @include respond-to(767) {
+            width: 100%;
+            padding-right: 0;
+
+        }
+    }
+
+    a {
+        color: $text-green !important;
+        text-decoration: none;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+    &__title {
+        margin-top: 32px;
+
+        h6 {
+            font-size: 1.25rem;
+            margin-top: 32px;
+        }
+
+        &:hover a h6 {
+            font-weight: bold;
+        }
+    }
+
+    &__read-now {
+        margin-top: 28px;
+    }
+
+}
+
+.more,
+.less {
+    text-decoration: underline;
+    margin-top: 43px;
+    margin-bottom: 37px;
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
+}

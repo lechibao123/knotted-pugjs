@@ -1,0 +1,47 @@
+.artist-brief{
+    background: $text-pink;
+    border-bottom: 1px solid $primary-color;;
+    .brief-content{
+        padding-top: 35px;
+        padding-bottom: 20px;
+        h4{
+            text-transform: uppercase;
+            font-size:16px;
+            letter-spacing: 0.55px;
+            padding-bottom: 20px;
+        }
+        p{
+            font-size: 14px;
+            letter-spacing: 0.48px;
+            line-height: 20px;
+        }
+        p+p{
+            text-indent: 1.5em;
+            padding-bottom: 40px;
+        }
+        a{
+            color: $text-green;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 0.55px;
+            &:hover{
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+        
+    }
+    iframe{
+        @include respond-to(768) {
+            height: 200px;
+            width: 100%;
+        }
+    }
+}
+.vimeo{
+    display: flex;
+    align-items: center;
+    @include respond-to(768) {
+        min-height: 300px;
+    }
+}

@@ -1,0 +1,44 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - contact
+    
+block main-wrapper
+    h1.d-none Namtech - contact
+    .wrapper-child.bg-pink
+        section.contact
+            .contact__img
+                img(src="./assets/imgs/contact_page/contact.jpg", alt="contact")
+            .contact__company
+                .form-content
+                    .px-5.mt-58
+                        h6.pb-4.text-uppercase company information
+                        p.mb-5 hello@knotted.com.au <br/>
+                            | 0400 000 000
+                    hr(color="#2B4429")
+                    .px-5.mt-58
+                        h6.mb-40.text-uppercase get in touch
+                        p.mb-5 Sed ut perspiciatis unde ommits iste natus error sit 
+                            |voluptatem accusantium doloremque laudantium, totam rem 
+                            |aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
+                            |architecto beatae vitae dicta sunt explicabo.
+                form(action="")
+                    input(type='text', placeholder="FIRST NAME", required).border-right.border-bottom.border-top
+                    input(type='text', placeholder="LAST NAME", required).border-bottom.border-top.border-right
+                    input(type='text', placeholder="EMAIL", required).border-right.border-bottom
+                    input(type='text', placeholder="PHONE", required).border-bottom.border-right
+                    select.border-0.border-right
+                        -
+                            let variables = [
+                                {name: "SELECT SUBJECT", disabled: true},
+                                {name: "General"},
+                                {name: "Sales / Custom Request"},
+                                {name: "Artist Enquiry"},
+                            ]
+                        each variable in variables
+                            option(value=variable.id, selected = variable.disabled ? "selected" : null, disabled = variable.disabled ? variable.disabled : false)= variable.name
+                    textarea(placeholder = "MESSAGE", id="theTextarea", required).border-top.border-right
+                    button(type="submit").btn-send
+                        h6.m-0 SEND
+            .contact__content
+                p Allow 24 hours for our team to get back to you

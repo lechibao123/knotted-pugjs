@@ -1,0 +1,58 @@
+.contact{
+    position: relative;
+    &__company{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .form-content{
+            width: 30%;
+            border: 1px solid $primary-color;
+            @include respond-to(768) {
+                width: 100%;
+            }
+        }
+        .border-right{
+            border-right: 1px solid $primary-color !important;
+        }
+        .border-top{
+            border-top: 1px solid $primary-color !important;
+        }
+        .border-bottom{
+            border-bottom: 1px solid $primary-color !important;
+        }
+        form{
+            width: 70%;
+            input{
+                width:50%;
+                border: 0;
+                float: left;
+            }
+            textarea{
+                border: 0;
+            }
+            @include respond-to(768) {
+                width: 100%;
+            }
+        }
+    }
+    &__content{
+        width: 70%;
+        text-align: center;
+        float: right;
+        margin-top: 22px;
+        margin-bottom: 55px;
+        @include respond-to(768) {
+            width: 100%;
+        }
+    }
+}
+
+.btn-send{
+    color: $text-pink !important;
+    background-color: $bg-green;
+    display: block;
+    width: 100%;
+    margin-top: -7px;
+    height: 56px;
+}

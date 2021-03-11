@@ -1,0 +1,65 @@
+.heross4 {
+    background: url('../../assets/imgs/home/image_hannah.png') no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    max-width: 1920px;
+
+    &::before {
+        z-index: 1;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(55, 51, 51, 0.5);
+    }
+
+    @include respond-to(768) {
+        height: 300px;
+    }
+
+    .content {
+        z-index: 10;
+        text-align: center;
+        text-transform: uppercase;
+
+        h2 {
+            color: $light-color;
+            font-size: 70px;
+            margin-bottom: 30px;
+            font-style: italic;
+
+
+            @include respond-to(768) {
+                font-size: 45px;
+            }
+        }
+
+        p {
+            color: $light-color;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        a {
+            font-size: 16px;
+            color: $light-color;
+            font-style: italic;
+
+            &:hover {
+                color: $light-color;
+                text-decoration: none;
+            }
+
+            &:hover span {
+                margin-left: 10px;
+                ;
+            }
+        }
+    }
+}

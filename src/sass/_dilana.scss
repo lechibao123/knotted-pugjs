@@ -1,0 +1,7 @@
+[class*=left-right] {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid $primary-color;
+    flex-wrap: wrap;
+}

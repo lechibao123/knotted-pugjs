@@ -1,0 +1,37 @@
+.how-works{
+    height: 362px;
+    border-bottom: 1px solid $primary-color;;
+    background: $primary-color;
+    color: $text-pink;
+    padding-left: 32px;
+    .item{
+    }
+    h3{
+        font-size: 16px;
+        padding-top: 119px;
+    }
+    h4{
+        padding-top: 35px;
+        font-size: 24px;
+        // line-height: 29.95px;
+        width: 362px;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    p{
+        padding-top: 8px;
+        font-size: 14px;
+        letter-spacing: 0.48px;
+        line-height: 20px;
+        width: 329px;
+        text-align: left;
+    }
+    
+}
+.how-work-artist{
+    .how-works{
+        background: $text-pink;
+        color: $primary-color;
+    }
+}
